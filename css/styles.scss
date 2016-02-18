@@ -1,0 +1,74 @@
+@import "normalize";
+@import "rules";
+
+* {
+    @include border_box;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+    min-height: 100%;
+}
+
+html body {
+    background: url('../img/space_by_missstrublingstorm.jpg') no-repeat center -40px;
+    background-color: #000000;
+    background-size: 1240px 966px;
+    color: $foreground_color;
+}
+
+.container {
+    position: relative;
+    padding-top: 180px;
+    padding-bottom: 40px;
+}
+
+.box {
+    @include background_gradient;
+    @include main_border;
+
+    padding: $box_padding;
+}
+
+body .container {
+
+    a{
+        text-decoration: none;
+
+        &,
+        &:hover,
+        &:visited {
+            color: $lightblue;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 30px;
+        font-weight: normal;
+    }
+
+    .announcement {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    #footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        a {
+            color: $lightblue;
+
+        }
+    }
+}
